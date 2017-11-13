@@ -19,6 +19,8 @@ public class LoginPage extends BasePage {
     private WebElement loginBtn;
     @FindBy(xpath = "/html/body/div[2]/header/nav/div[2]/ul[2]/li/a/span")
     private WebElement userProfileLink;
+    @FindBy(xpath = "//p[contains(.,'SIGN IN TO CONTINUE.')]")
+    private WebElement signToContinue;
 
     public WebElement getLogo() {
         return wait.until(ExpectedConditions.visibilityOf(logo));
@@ -40,6 +42,12 @@ public class LoginPage extends BasePage {
     }
     public WebElement getUserProfileLink(){
         return wait.until(ExpectedConditions.visibilityOf(userProfileLink));
+    }
+    public void clickUserProfileLink(){
+        wait.until(ExpectedConditions.visibilityOf(userProfileLink)).click();
+    }
+    public WebElement getSignInToContinue(){
+        return wait.until(ExpectedConditions.visibilityOf(signToContinue));
     }
 
 
