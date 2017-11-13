@@ -13,6 +13,7 @@ public class BasePage {
         this.driver = driver;
         PageFactory.initElements(driver,this );
         wait = new WebDriverWait(driver, 10);
+
         executor = (JavascriptExecutor)driver;
     }
 }
