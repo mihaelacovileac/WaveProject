@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="wave">
+    <parameter name="url" value="http://fits.qauber.com/#/page/login"/>
+    <parameter name="browser" value="chrome"/>
+    <test name = "test">
+        <classes>
+            <class name="Tests.BaseTest"/>
+        </classes>
+    </test>
+</suite>
