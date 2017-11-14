@@ -43,9 +43,6 @@ public class LoginPage extends BasePage {
     public WebElement getUserProfileLink(){
         return wait.until(ExpectedConditions.visibilityOf(userProfileLink));
     }
-    public void clickUserProfileLink(){
-        wait.until(ExpectedConditions.visibilityOf(userProfileLink)).click();
-    }
     public WebElement getSignInToContinue(){
         return wait.until(ExpectedConditions.visibilityOf(signToContinue));
     }

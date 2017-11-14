@@ -8,15 +8,14 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.testng.Assert.assertTrue;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
+
+import org.testng.annotations.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -27,13 +26,13 @@ public class BaseTest {
     protected LoginPage loginPage;
 
     @Parameters({"browser", "url"})
-    @BeforeClass
+    @BeforeSuite
     public void baseBeforeClass(String browser,String url) throws MalformedURLException {
         //Run FireFox
         if (browser.equalsIgnoreCase("firefox")) {
             driver = new FirefoxDriver();
             driver.get(url);
-            driver.manage().window().maximize();
+            //driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         }
         //run Chrome
@@ -75,9 +74,15 @@ public class BaseTest {
             driver = new RemoteWebDriver(new URL(URL), caps);
             driver.get(url);
             driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        }//HtmlUnitDriver, is fastest. works on background.name:Headles
+        else if(browser.equalsIgnoreCase("htmlunitdriver")){
+            driver = new HtmlUnitDriver();
+            driver.get(url);
+            //driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         }
     }
-    @AfterClass
+    @AfterSuite
     public void baseAfterClass(){
 //        driver.close();
 //        driver.quit();
