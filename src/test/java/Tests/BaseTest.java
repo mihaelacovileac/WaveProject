@@ -40,7 +40,7 @@ public class BaseTest {
             driver = new ChromeDriver();
             driver.get(url);
             driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         }
         //Run Appium
         else if (browser.equalsIgnoreCase("appium")) {
@@ -84,8 +84,8 @@ public class BaseTest {
     }
     @AfterSuite
     public void baseAfterClass(){
-//        driver.close();
-//        driver.quit();
+        driver.close();
+        driver.quit();
     }
     @Test
     public void assertLogo(){
