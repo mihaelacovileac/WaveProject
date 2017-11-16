@@ -5,7 +5,7 @@
     <parameter name="browser" value="chrome"/>
     <test name = "test">
         <classes>
-            <class name="Tests.TestChangePassword"/>
+            <class name="Tests.TestDeleteProfilePicture"/>
         </classes>
     </test>
 </suite>

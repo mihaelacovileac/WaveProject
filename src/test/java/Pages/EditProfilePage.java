@@ -5,6 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+
 public class EditProfilePage extends BasePage {
     public EditProfilePage(WebDriver driver){super(driver);}
 
@@ -13,6 +17,8 @@ public class EditProfilePage extends BasePage {
     private WebElement selectPictureBtn;
     @FindBy(xpath = "//button[@ng-click='$ctrl.deleteProfilePicture()']")
     private WebElement deletePictureBtn;
+    @FindBy(xpath = "//button[@disabled='disabled']")
+    private WebElement deleteBtnDisable;
     //General info
     @FindBy(xpath = "//input[@name='name']")
     private  WebElement nameField;
@@ -54,6 +60,26 @@ public class EditProfilePage extends BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(deletePictureBtn)).click();
     }
     //i have to learn hoe to upload a picture and add more methods
+    public void uploadImage(String imagePath) throws AWTException {
+        wait.until(ExpectedConditions.elementToBeClickable(selectPictureBtn));
+        executor.executeScript("arguments[0].click()", selectPictureBtn);
+        //put path to your image in a clipboard
+        StringSelection ss = new StringSelection(imagePath);
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+        //imitate mouse events like ENTER, CTRL+C, CTRL+V
+        Robot robot = new Robot();
+        robot.delay(15000);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.delay(1500);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+
+    }
 
     //methods for change name:
     public void setNameField(String strName) {
@@ -106,6 +132,11 @@ public class EditProfilePage extends BasePage {
     public WebElement getVisiblErrorCurrentPassWrongElement(){
         return wait.until(ExpectedConditions.visibilityOf(errorCurrentPassDifferent));
     }
+
+    public WebElement getDeleteBtnDisable() {
+        return wait.until(ExpectedConditions.visibilityOf(deleteBtnDisable));
+    }
+
     public String getSuccessMessage(){
         return successMessage.getText();
     }

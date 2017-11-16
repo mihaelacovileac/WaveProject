@@ -84,8 +84,8 @@ public class BaseTest {
     }
     @AfterSuite
     public void baseAfterClass(){
-        driver.close();
-        driver.quit();
+//        driver.close();
+//        driver.quit();
     }
     @Test
     public void assertLogo(){
