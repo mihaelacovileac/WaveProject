@@ -16,6 +16,7 @@ public class DataProviders {
     }
     @DataProvider(name = "ChangePasswordPositive")
     public static Object[][] changePasswordData(){
+
         Object[][] data = new Object[1][3];
         data[0][0]= "kisulea";
         data[0][1] = "kisulea";

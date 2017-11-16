@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.awt.*;
+import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
@@ -19,6 +20,8 @@ public class EditProfilePage extends BasePage {
     private WebElement deletePictureBtn;
     @FindBy(xpath = "//button[@disabled='disabled']")
     private WebElement deleteBtnDisable;
+    @FindBy(xpath = "//img[@class='img-thumbnail img-circle thumb128' and @src='app/img/profile.jpg']")
+    private WebElement assertionUploadPicture;//if is not uploaded any picture than tha xpath will not change
     //General info
     @FindBy(xpath = "//input[@name='name']")
     private  WebElement nameField;
@@ -59,24 +62,39 @@ public class EditProfilePage extends BasePage {
     public void clickDeletePictureBtn(){
         wait.until(ExpectedConditions.elementToBeClickable(deletePictureBtn)).click();
     }
-    //i have to learn hoe to upload a picture and add more methods
-    public void uploadImage(String imagePath) throws AWTException {
+    //i have to learn how to upload a picture and add more methods
+    public void uploadImage() throws AWTException {
+
         wait.until(ExpectedConditions.elementToBeClickable(selectPictureBtn));
         executor.executeScript("arguments[0].click()", selectPictureBtn);
-        //put path to your image in a clipboard
-        StringSelection ss = new StringSelection(imagePath);
-        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
-        //imitate mouse events like ENTER, CTRL+C, CTRL+V
+//        //put path to your image in a clipboard
+//        StringSelection ss = new StringSelection(imagePath);
+//        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+//        //imitate mouse events like ENTER, CTRL+C, CTRL+V
+//        Robot robot = new Robot();
+//        robot.delay(15000);
+//        robot.keyPress(KeyEvent.VK_ENTER);
+//        robot.keyRelease(KeyEvent.VK_ENTER);
+//        robot.keyPress(KeyEvent.VK_CONTROL);
+//        robot.keyPress(KeyEvent.VK_V);
+//        robot.keyRelease(KeyEvent.VK_V);
+//        robot.keyRelease(KeyEvent.VK_CONTROL);
+//        robot.keyPress(KeyEvent.VK_ENTER);
+//        robot.delay(1500);
+//        robot.keyRelease(KeyEvent.VK_ENTER);
+        String text = "sky.jpg";
+
+        StringSelection selection = new StringSelection(text);
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(selection, selection);
+
         Robot robot = new Robot();
-        robot.delay(15000);
-        robot.keyPress(KeyEvent.VK_ENTER);
-        robot.keyRelease(KeyEvent.VK_ENTER);
         robot.keyPress(KeyEvent.VK_CONTROL);
         robot.keyPress(KeyEvent.VK_V);
         robot.keyRelease(KeyEvent.VK_V);
         robot.keyRelease(KeyEvent.VK_CONTROL);
         robot.keyPress(KeyEvent.VK_ENTER);
-        robot.delay(1500);
+        robot.delay(2500);
         robot.keyRelease(KeyEvent.VK_ENTER);
 
     }
@@ -141,4 +159,8 @@ public class EditProfilePage extends BasePage {
         return successMessage.getText();
     }
 
+    public WebElement getAssertionUploadPicture() {
+       //avatar when picture is not uploaded
+        return assertionUploadPicture;
+    }
 }
