@@ -22,7 +22,7 @@ public class TestUpdateCompanyInfo extends BaseTest {
         editCompanyPage = new EditCompanyPage(driver);
         loginPage = new LoginPage(driver);
     }
-    @Test(dataProviderClass = DataProviders.class,dataProvider="updateCompanyInfo")
+    @Test(dataProviderClass = DataProviders.class,dataProvider="updateCompanyInfo", priority = 1)
     public void testUpdateCompanyInfo(String name, String country, String address1, String address2, String city,
                                       String state,String zip,String phone, String email, String notes, String username, String password) throws InterruptedException {
         loginPage.setUsername(username);
@@ -43,7 +43,39 @@ public class TestUpdateCompanyInfo extends BaseTest {
         editCompanyPage.setEmail(email);
         editCompanyPage.setNotes(notes);
         editCompanyPage.clickUpdateBtn();
+        Thread.sleep(3000);
 
         Assert.assertTrue(editCompanyPage.getSuccessUpdateMessage().isDisplayed());
+        headerPage.clickUserLink();
+        profilePanelPage.clickSignOut();
+        Thread.sleep(4000);
+    }
+
+    @Test(priority = 2)
+    public void testRequiredFields() throws InterruptedException {
+        loginPage.setUsername("buquxahu@cars2.club");
+        loginPage.setPassword("kisulea");
+        loginPage.clickLoginBtn();
+        headerPage.clickUserLink();
+        Thread.sleep(3000);
+        profilePanelPage.clickEditCompanyBtn();
+        Thread.sleep(3000);
+        editCompanyPage.setCompanyName("");
+        editCompanyPage.setCountry("Select a country");
+        editCompanyPage.setAddress1("");
+        editCompanyPage.setAddress2("");
+        editCompanyPage.setCity("");
+        editCompanyPage.setStateTextField("");
+        editCompanyPage.setZip("");
+        editCompanyPage.setPhone("");
+        editCompanyPage.setEmail("");
+        editCompanyPage.setNotes("");
+        editCompanyPage.clickUpdateBtn();
+
+        editCompanyPage.getAllRequiredFields();
+        int x = editCompanyPage.countRequiredFields();
+        System.out.println(x);
+
+        Assert.assertTrue(x==8);//8 fields are required on this form
     }
 }

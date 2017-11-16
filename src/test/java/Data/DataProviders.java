@@ -38,7 +38,7 @@ public class DataProviders {
     public static Object[][] updateCompanyInfo(){
         Object[][] data = new Object[1][12];
         data[0][0] = RandomStringUtils.randomAlphabetic(8).toLowerCase();//company name
-        data[0][1] = "Albania";//country
+        data[0][1] = "United States";//country
         data[0][2]=RandomStringUtils.randomNumeric(3)+" "+RandomStringUtils.randomAlphabetic(5)+ " Str.";//address1
         data[0][3]="Apt. "+ RandomStringUtils.randomNumeric(2);//address2
         data[0][4]=RandomStringUtils.randomAlphabetic(5).toLowerCase();//city

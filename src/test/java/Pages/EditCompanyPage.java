@@ -3,7 +3,11 @@ package Pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.Iterator;
+import java.util.List;
 
 public class EditCompanyPage extends BasePage {
     public EditCompanyPage(WebDriver driver){super(driver);}
@@ -19,6 +23,8 @@ public class EditCompanyPage extends BasePage {
     private WebElement city;
     @FindBy(xpath = "//select[@name='state']")
     private WebElement state;
+    @FindBy(xpath = "//input[@type ='text' and @name = 'state']")
+    private WebElement stateTextField;
     @FindBy(xpath = "//input[contains(@ng-model,'$ctrl.company.zip')]")
     private WebElement zip;
     @FindBy(xpath = "//input[@ng-model='$ctrl.company.phone']")
@@ -31,7 +37,27 @@ public class EditCompanyPage extends BasePage {
     private WebElement update;
     @FindBy(xpath = "//div[@class='uk-notify-message alert-dismissable alert alert-success']")//was update successfully
     private WebElement successUpdateMessage;
+    @FindBy(xpath = "//span[@class = 'text-danger' and text()='This field is required']")
+    private List<WebElement> requiredFields;
 
+    public List<WebElement> getAllRequiredFields() {
+        wait.until(ExpectedConditions.visibilityOfAllElements(requiredFields));
+        return requiredFields;
+    }
+    public int countRequiredFields(){
+        Iterator<WebElement> iterator =requiredFields.iterator();
+        int counter = 0;
+        while (iterator.hasNext()){
+            counter= counter+1;
+            iterator.next();
+        }
+        return counter;
+    }
+
+    public void setStateTextField(String strStateTextField) {
+        stateTextField.clear();
+        stateTextField.sendKeys(strStateTextField);
+    }
     //methods for update information about company
 
     public void setCompanyName(String strCompanyName) {
