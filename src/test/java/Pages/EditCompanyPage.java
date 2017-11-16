@@ -27,8 +27,10 @@ public class EditCompanyPage extends BasePage {
     private WebElement email;
     @FindBy(xpath = "//textarea[@ng-model='$ctrl.company.notes']")
     private WebElement notes;
-    @FindBy(xpath = "//button[@ng-click='$ctrl.submitAction()']")
+    @FindBy(xpath = "//button[contains(@ng-click,'$ctrl.submitAction()')]")
     private WebElement update;
+    @FindBy(xpath = "//div[@class='uk-notify-message alert-dismissable alert alert-success']")//was update successfully
+    private WebElement successUpdateMessage;
 
     //methods for update information about company
 
@@ -63,6 +65,7 @@ public class EditCompanyPage extends BasePage {
     }
 
     public void setEmail(String strEmail) {
+        email.clear();
         email.sendKeys(strEmail);
     }
 
@@ -83,5 +86,9 @@ public class EditCompanyPage extends BasePage {
     public void setState(String strState) {
         Select stateDropdown = new Select(state);
         stateDropdown.selectByVisibleText(strState);
+    }
+
+    public WebElement getSuccessUpdateMessage() {
+        return successUpdateMessage;
     }
 }
