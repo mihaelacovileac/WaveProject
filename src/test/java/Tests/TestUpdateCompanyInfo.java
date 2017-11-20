@@ -22,7 +22,7 @@ public class TestUpdateCompanyInfo extends BaseTest {
         editCompanyPage = new EditCompanyPage(driver);
         loginPage = new LoginPage(driver);
     }
-    @Test(dataProviderClass = DataProviders.class,dataProvider="updateCompanyInfo", priority = 1)
+    @Test(dataProviderClass = DataProviders.class,dataProvider="updateCompanyInfo",priority = 1)
     public void testUpdateCompanyInfo(String name, String country, String address1, String address2, String city,
                                       String state,String zip,String phone, String email, String notes, String username, String password) throws InterruptedException {
         loginPage.setUsername(username);

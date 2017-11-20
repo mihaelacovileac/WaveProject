@@ -19,7 +19,7 @@ public class TestChangeName extends TestLogin {
         profilePanelPage = new ProfilePanelPage(driver);
         editProfilePage = new EditProfilePage(driver);
     }
-    @Test(priority = 2, dataProviderClass = DataProviders.class,dataProvider= "ChangeName")
+    @Test(dependsOnMethods = "testLogin", dataProviderClass = DataProviders.class,dataProvider= "ChangeName")
     public void testChangeName(String name){
         headerPage.clickUserLink();
         profilePanelPage.clickEditProfileBtn();
@@ -28,7 +28,7 @@ public class TestChangeName extends TestLogin {
         String successMessage = editProfilePage.getSuccessMessage();
         Assert.assertEquals(successMessage, "The profile has been updated.");
     }
-    @Test(priority = 3)
+    @Test(dependsOnMethods = "testLogin")
     private void testErrorForChangeName(){
         headerPage.clickUserLink();
         profilePanelPage.clickEditProfileBtn();

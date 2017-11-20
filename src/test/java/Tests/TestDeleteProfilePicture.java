@@ -18,7 +18,7 @@ public class TestDeleteProfilePicture extends TestLogin {
         profilePanelPage = new ProfilePanelPage(driver);
         editProfilePage = new EditProfilePage(driver);
     }
-    @Test(priority = 2)
+    @Test(dependsOnMethods = "testLogin")
     public void deletePicTest(){
 
         //precondition for this test : user should have a picture uploaded already

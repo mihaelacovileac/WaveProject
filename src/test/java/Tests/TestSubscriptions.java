@@ -26,7 +26,7 @@ public class TestSubscriptions extends TestLogin {
         subscriptionsPage =new SubscriptionsPage(driver);
 
     }
-    @Test(priority = 2)
+    @Test(dependsOnMethods = "testLogin")
 
     //This test case need to be updated  and did not work
 

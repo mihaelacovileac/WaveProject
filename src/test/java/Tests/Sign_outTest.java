@@ -17,7 +17,7 @@ public class Sign_outTest extends TestLogin {
         loginPage = new LoginPage(driver);
         profilePanelPage = new ProfilePanelPage(driver);
     }
-    @Test(priority = 2)
+    @Test(dependsOnMethods = "testLogin")
     public void testSignOut(){
         headerPage.clickUserLink();
         profilePanelPage.clickSignOut();

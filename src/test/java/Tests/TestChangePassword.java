@@ -18,8 +18,8 @@ public class TestChangePassword extends TestLogin {
         profilePanelPage = new ProfilePanelPage(driver);
         editProfilePage = new EditProfilePage(driver);
     }
-    @Test(priority = 0,dataProviderClass = DataProviders.class,dataProvider= "ChangePasswordPositive", enabled = false)
-    public void testChangePassword(String currentPass, String newPass, String confirmPass){
+    @Test(dependsOnMethods = "testLogin",dataProviderClass = DataProviders.class,dataProvider= "ChangePasswordPositive", enabled = true)
+    public void testChangePasswordPositive(String currentPass, String newPass, String confirmPass){
         headerPage.clickUserLink();
         profilePanelPage.clickEditProfileBtn();
         editProfilePage.setCurrentPassword(currentPass);
@@ -30,7 +30,7 @@ public class TestChangePassword extends TestLogin {
         Assert.assertEquals(successMessage, "The password has been changed.");
     }
 
-    @Test(priority = 2,dataProviderClass = DataProviders.class,dataProvider= "ChangePasswordNegative")
+    @Test(dependsOnMethods = "testLogin",dataProviderClass = DataProviders.class,dataProvider= "ChangePasswordNegative")
     public void testChangePasswordErrors(String currentPass, String newPass, String confirmPass){
         headerPage.clickUserLink();
         profilePanelPage.clickEditProfileBtn();
@@ -78,6 +78,17 @@ public class TestChangePassword extends TestLogin {
         }catch (Exception e){
             System.out.println("Couldn't find error4");
         }
+    }
+
+    @Test(dependsOnMethods = "testLogin")
+    //For this test we need to assert that all fields are encrypted
+    //For this we need to check that all this fields have in html code type "password"
+    public void testPasswordEncrypted(){
+        headerPage.clickUserLink();
+        profilePanelPage.clickEditProfileBtn();
+        editProfilePage.getAllPasswordEncryptedFields();
+       int passwordFields = editProfilePage.getNrOfPasswordFields();
+        Assert.assertTrue(passwordFields==3,"Password is not encrypted in all password fields.");
     }
 
 }

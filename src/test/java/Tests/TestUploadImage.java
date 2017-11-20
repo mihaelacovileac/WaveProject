@@ -20,8 +20,7 @@ public class TestUploadImage extends TestLogin {
         profilePanelPage = new ProfilePanelPage(driver);
         editProfilePage = new EditProfilePage(driver);
     }
-    @Test
-    //this test did not work,need to find how to upload a picture
+    @Test(dependsOnMethods = "testLogin")
     public void uploadImageTest() throws InterruptedException, AWTException, IOException {
         headerPage.clickUserLink();
         profilePanelPage.clickEditProfileBtn();

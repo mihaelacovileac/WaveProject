@@ -9,6 +9,8 @@ import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.util.Iterator;
+import java.util.List;
 
 public class EditProfilePage extends BasePage {
     public EditProfilePage(WebDriver driver){super(driver);}
@@ -47,6 +49,9 @@ public class EditProfilePage extends BasePage {
     private  WebElement errorInput6Characters;
     @FindBy(xpath = "/html/body/div[2]/section/div/div/div[2]/form[2]/div/div[2]/fieldset[1]/div/div/span[2]")// "//span[contains(.,'Your current password is different')]"
     private WebElement errorCurrentPassDifferent;
+
+    @FindBy(xpath = "//input[@type='password']")
+    private List<WebElement> passwordEncrypted;
 
     //Successful message
     // xpath if this doesn't work "//div[@class='uk-notify-message alert-dismissable alert alert-success']"
@@ -148,5 +153,17 @@ public class EditProfilePage extends BasePage {
     public WebElement getAssertionUploadPicture() {
        //avatar when picture is not uploaded
         return assertionUploadPicture;
+    }
+    public List<WebElement> getAllPasswordEncryptedFields(){
+        return passwordEncrypted;
+    }
+    public int getNrOfPasswordFields(){
+        Iterator<WebElement> it = passwordEncrypted.iterator();
+        int count = 0;
+        while (it.hasNext()){
+            count=count+1;
+            it.next();
+        }
+        return count;
     }
 }
