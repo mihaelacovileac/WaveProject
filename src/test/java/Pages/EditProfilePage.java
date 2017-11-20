@@ -67,21 +67,7 @@ public class EditProfilePage extends BasePage {
 
         wait.until(ExpectedConditions.elementToBeClickable(selectPictureBtn));
         executor.executeScript("arguments[0].click()", selectPictureBtn);
-//        //put path to your image in a clipboard
-//        StringSelection ss = new StringSelection(imagePath);
-//        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
-//        //imitate mouse events like ENTER, CTRL+C, CTRL+V
-//        Robot robot = new Robot();
-//        robot.delay(15000);
-//        robot.keyPress(KeyEvent.VK_ENTER);
-//        robot.keyRelease(KeyEvent.VK_ENTER);
-//        robot.keyPress(KeyEvent.VK_CONTROL);
-//        robot.keyPress(KeyEvent.VK_V);
-//        robot.keyRelease(KeyEvent.VK_V);
-//        robot.keyRelease(KeyEvent.VK_CONTROL);
-//        robot.keyPress(KeyEvent.VK_ENTER);
-//        robot.delay(1500);
-//        robot.keyRelease(KeyEvent.VK_ENTER);
+
         String text = "sky.jpg";
 
         StringSelection selection = new StringSelection(text);

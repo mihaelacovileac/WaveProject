@@ -2,10 +2,10 @@
 
 <suite name="wave">
     <parameter name="url" value="http://fits.qauber.com/#/page/login"/>
-    <parameter name="browser" value="firefox"/>
+    <parameter name="browser" value="chrome"/>
     <test name = "test">
         <classes>
-            <class name="Tests.TestUploadImage"/>
+            <class name="Tests.TestOpenProfilePanel"/>
         </classes>
     </test>
 </suite>

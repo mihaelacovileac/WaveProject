@@ -17,6 +17,15 @@ public class ProfilePanelPage extends BasePage {
     private WebElement editProfileBtn;
     @FindBy(xpath = "//button[contains(.,'Edit Company')]")
     private WebElement editCompanyBtn;
+    @FindBy(xpath = "//nav[@class= 'ng-scope']")
+    private WebElement profilePanelDisplayed;
+
+
+//    For assertion: changing color of profile icon and subscription icon from gay to blue
+    @FindBy(xpath = "//li[@class= 'uib-tab nav-item ng-scope ng-isolate-scope active']/a/uib-tab-heading/em[@class='icon-equalizer fa-lg']")
+    private WebElement subscriptionIconActive;
+    @FindBy(xpath = "//li[@class= 'uib-tab nav-item ng-scope ng-isolate-scope active']/a/uib-tab-heading/em[@class='icon-user fa-lg']")
+    private  WebElement profileIconActive;
 
     public void clickSignOut(){
         wait.until(ExpectedConditions.visibilityOf(signOut)).click();
@@ -32,5 +41,16 @@ public class ProfilePanelPage extends BasePage {
     }
     public void clickEditCompanyBtn(){
         wait.until(ExpectedConditions.elementToBeClickable(editCompanyBtn)).click();
+    }
+    public WebElement getProfilePanelDisplayed() {
+        return wait.until(ExpectedConditions.visibilityOf(profilePanelDisplayed));
+    }
+
+    public WebElement getSubscriptionIconActive() {
+        return wait.until(ExpectedConditions.visibilityOf(subscriptionIconActive));
+    }
+
+    public WebElement getProfileIconActive() {
+        return wait.until(ExpectedConditions.visibilityOf(profileIconActive));
     }
 }

@@ -38,9 +38,10 @@ public class BaseTest {
         //run Chrome
         else if (browser.equalsIgnoreCase("chrome")) {
             driver = new ChromeDriver();
+//            driver.manage().window().maximize();
             driver.get(url);
-            driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
         }
         //Run Appium
         else if (browser.equalsIgnoreCase("appium")) {
@@ -74,18 +75,12 @@ public class BaseTest {
             driver = new RemoteWebDriver(new URL(URL), caps);
             driver.get(url);
             driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        }//HtmlUnitDriver, is fastest. works on background.name:Headles
-        else if(browser.equalsIgnoreCase("htmlunitdriver")){
-            driver = new HtmlUnitDriver();
-            driver.get(url);
-            //driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         }
     }
     @AfterSuite
     public void baseAfterClass(){
-//        driver.close();
-//        driver.quit();
+        driver.close();
+        driver.quit();
     }
     @Test
     public void assertLogo(){
