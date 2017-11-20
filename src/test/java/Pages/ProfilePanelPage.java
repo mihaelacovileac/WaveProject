@@ -53,4 +53,7 @@ public class ProfilePanelPage extends BasePage {
     public WebElement getProfileIconActive() {
         return wait.until(ExpectedConditions.visibilityOf(profileIconActive));
     }
+    public WebElement getEditCompanyBtn() {
+        return wait.until(ExpectedConditions.elementToBeClickable(editCompanyBtn));
+    }
 }

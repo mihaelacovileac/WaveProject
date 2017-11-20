@@ -3,9 +3,13 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.annotations.DataProvider;
 
 public class DataProviders {
-    @DataProvider(name = "usernamePassword")
+    @DataProvider(name = "usernamePassword")//Super Admin User
     public static Object[][] getDataFromDataProvider(){
         return new Object[][]{{"buquxahu@cars2.club","kisulea"}};
+    }
+    @DataProvider(name = "usernamePasswordRU")//regularAdmin User
+    public static Object[][] DataProvider(){
+        return new Object[][]{{"client4@amail.club","client4"}};
     }
 
     @DataProvider(name = "ChangeName")

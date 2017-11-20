@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5943a6e3-cfcc-4b35-8e71-12fd6a7b2bbe" name="Default" comment="">
-      <change type="DELETED" beforePath="$USER_HOME$/git/_windows/git.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/git/_windows/laf.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/git/_windows/path.macros.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/git/code.style.schemes.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/git/debugger.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Tests/TestRegularUser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Pages/EditProfilePage.java" afterPath="$PROJECT_DIR$/src/test/java/Pages/EditProfilePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Tests/Sign_outTest.java" afterPath="$PROJECT_DIR$/src/test/java/Tests/Sign_outTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Tests/TestChangeName.java" afterPath="$PROJECT_DIR$/src/test/java/Tests/TestChangeName.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Tests/TestChangePassword.java" afterPath="$PROJECT_DIR$/src/test/java/Tests/TestChangePassword.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Tests/TestDeleteProfilePicture.java" afterPath="$PROJECT_DIR$/src/test/java/Tests/TestDeleteProfilePicture.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Tests/TestSubscriptions.java" afterPath="$PROJECT_DIR$/src/test/java/Tests/TestSubscriptions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Tests/TestUpdateCompanyInfo.java" afterPath="$PROJECT_DIR$/src/test/java/Tests/TestUpdateCompanyInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Tests/TestUploadImage.java" afterPath="$PROJECT_DIR$/src/test/java/Tests/TestUploadImage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Data/DataProviders.java" afterPath="$PROJECT_DIR$/src/test/java/Data/DataProviders.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Pages/MainNavigationPage.java" afterPath="$PROJECT_DIR$/src/test/java/Pages/MainNavigationPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Pages/ProfilePanelPage.java" afterPath="$PROJECT_DIR$/src/test/java/Pages/ProfilePanelPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testng.xml" afterPath="$PROJECT_DIR$/testng.xml" />
     </list>
     <list id="2436c762-b7ad-44e8-b721-9411fd87ef08" name="wave" comment="new" />
@@ -29,18 +20,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="testng.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/testng.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -74,14 +54,11 @@
         <option value="$PROJECT_DIR$/src/test/java/Tests/TestLogin.java" />
         <option value="$PROJECT_DIR$/src/test/java/Pages/HeaderPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/Pages/MenuPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Pages/MainNavigationPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/Pages/BasePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/Pages/EditCompanyPage.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/Data/DataProviders.java" />
         <option value="$PROJECT_DIR$/src/test/java/Pages/SubscriptionsPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Pages/ProfilePanelPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/Tests/TestOpenProfilePanel.java" />
         <option value="$PROJECT_DIR$/src/test/java/Tests/BaseTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Pages/EditProfilePage.java" />
@@ -91,8 +68,12 @@
         <option value="$PROJECT_DIR$/src/test/java/Tests/TestDeleteProfilePicture.java" />
         <option value="$PROJECT_DIR$/src/test/java/Tests/TestUpdateCompanyInfo.java" />
         <option value="$PROJECT_DIR$/src/test/java/Tests/TestUploadImage.java" />
-        <option value="$PROJECT_DIR$/testng.xml" />
         <option value="$PROJECT_DIR$/src/test/java/Tests/TestSubscriptions.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Data/DataProviders.java" />
+        <option value="$PROJECT_DIR$/testng.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/Pages/MainNavigationPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Pages/ProfilePanelPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/TestRegularUser.java" />
       </list>
     </option>
   </component>
@@ -158,6 +139,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WaveProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WaveProject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WaveProject" type="b2602c69:ProjectViewProjectNode" />
@@ -570,44 +559,50 @@
       <option name="project" value="LOCAL" />
       <updated>1511138625876</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="newcode">
+      <created>1511208805088</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1511208805088</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="C__Users_mcovi_IdeaProjects_WaveProject_testng_xml - 2017.11.19 at 16h 37m 45s.xml">
+    <history-entry file="C__Users_mcovi_IdeaProjects_WaveProject_testng_xml - 2017.11.20 at 12h 46m 02s.xml">
       <configuration name="C:/Users/mcovi/IdeaProjects/WaveProject/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_mcovi_IdeaProjects_WaveProject_testng_xml - 2017.11.19 at 16h 41m 02s.xml">
+    <history-entry file="C__Users_mcovi_IdeaProjects_WaveProject_testng_xml - 2017.11.20 at 12h 49m 49s.xml">
       <configuration name="C:/Users/mcovi/IdeaProjects/WaveProject/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_mcovi_IdeaProjects_WaveProject_testng_xml - 2017.11.20 at 09h 26m 04s.xml">
+    <history-entry file="C__Users_mcovi_IdeaProjects_WaveProject_testng_xml - 2017.11.20 at 13h 03m 04s.xml">
       <configuration name="C:/Users/mcovi/IdeaProjects/WaveProject/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_mcovi_IdeaProjects_WaveProject_testng_xml - 2017.11.20 at 09h 26m 42s.xml">
+    <history-entry file="C__Users_mcovi_IdeaProjects_WaveProject_testng_xml - 2017.11.20 at 13h 05m 24s.xml">
       <configuration name="C:/Users/mcovi/IdeaProjects/WaveProject/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_mcovi_IdeaProjects_WaveProject_testng_xml - 2017.11.20 at 11h 33m 05s.xml">
+    <history-entry file="C__Users_mcovi_IdeaProjects_WaveProject_testng_xml - 2017.11.20 at 13h 06m 13s.xml">
       <configuration name="C:/Users/mcovi/IdeaProjects/WaveProject/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_mcovi_IdeaProjects_WaveProject_testng_xml - 2017.11.20 at 11h 52m 58s.xml">
+    <history-entry file="C__Users_mcovi_IdeaProjects_WaveProject_testng_xml - 2017.11.20 at 13h 07m 02s.xml">
       <configuration name="C:/Users/mcovi/IdeaProjects/WaveProject/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_mcovi_IdeaProjects_WaveProject_testng_xml - 2017.11.20 at 11h 55m 11s.xml">
+    <history-entry file="C__Users_mcovi_IdeaProjects_WaveProject_testng_xml - 2017.11.20 at 13h 15m 52s.xml">
       <configuration name="C:/Users/mcovi/IdeaProjects/WaveProject/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_mcovi_IdeaProjects_WaveProject_testng_xml - 2017.11.20 at 11h 57m 27s.xml">
+    <history-entry file="C__Users_mcovi_IdeaProjects_WaveProject_testng_xml - 2017.11.20 at 13h 24m 34s.xml">
       <configuration name="C:/Users/mcovi/IdeaProjects/WaveProject/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_mcovi_IdeaProjects_WaveProject_testng_xml - 2017.11.20 at 12h 07m 55s.xml">
+    <history-entry file="C__Users_mcovi_IdeaProjects_WaveProject_testng_xml - 2017.11.20 at 13h 28m 28s.xml">
       <configuration name="C:/Users/mcovi/IdeaProjects/WaveProject/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_mcovi_IdeaProjects_WaveProject_testng_xml - 2017.11.20 at 12h 09m 46s.xml">
+    <history-entry file="C__Users_mcovi_IdeaProjects_WaveProject_testng_xml - 2017.11.20 at 13h 33m 50s.xml">
       <configuration name="C:/Users/mcovi/IdeaProjects/WaveProject/testng.xml" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -617,7 +612,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33388704" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -691,14 +686,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/testng.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Pages/EditProfilePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
@@ -943,29 +930,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/HeaderPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/MainNavigationPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Data/balloon_flight_plant_91681_1920x1080.jpg" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/Data/DataProviders.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Pages/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -991,27 +956,6 @@
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/ProfilePanelPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding>
-            <element signature="e#1864#1865#0" expanded="true" />
-            <element signature="e#1955#1956#0" expanded="true" />
-            <element signature="e#2286#2287#0" expanded="true" />
-            <element signature="e#2371#2372#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1083,14 +1027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/TestLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Tests/TestChangeName.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1115,10 +1051,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/TestLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/HeaderPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#932#933#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Data/DataProviders.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="51" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="51" />
+          <folding>
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/MainNavigationPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="9" column="142" lean-forward="false" selection-start-line="9" selection-start-column="142" selection-end-line="9" selection-end-column="142" />
+          <folding>
+            <element signature="e#1307#1308#0" expanded="true" />
+            <element signature="e#1387#1388#0" expanded="true" />
+            <element signature="e#1429#1430#0" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1503#1504#0" expanded="true" />
+            <element signature="e#1535#1536#0" expanded="true" />
+            <element signature="e#1578#1579#0" expanded="true" />
+            <element signature="e#1614#1615#0" expanded="true" />
+            <element signature="e#1655#1656#0" expanded="true" />
+            <element signature="e#1689#1690#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/ProfilePanelPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="56" column="80" lean-forward="false" selection-start-line="56" selection-start-column="80" selection-end-line="56" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/TestRegularUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="43" column="89" lean-forward="false" selection-start-line="43" selection-start-column="89" selection-end-line="43" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/testng.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        <state relative-caret-position="119">
+          <caret line="7" column="46" lean-forward="false" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
           <folding />
         </state>
       </provider>
