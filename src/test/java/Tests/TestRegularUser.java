@@ -27,6 +27,7 @@ public class TestRegularUser extends BaseTest {
         loginPage.setUsername(username);
         loginPage.setPassword(password);
         loginPage.clickLoginBtn();
+        Thread.sleep(4000);
         Assert.assertTrue(mainNavigationPage.getAddReportLink().isDisplayed());
         Assert.assertTrue(mainNavigationPage.getReportsLink().isDisplayed());
         headerPage.clickUserLink();

@@ -64,7 +64,8 @@ public class BaseTest {
             driver.get(url);
 
             driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        } else if ((browser.equalsIgnoreCase("saucelab"))) {
+        }
+        else if ((browser.equalsIgnoreCase("saucelab"))) {
             String USERNAME = "mihaela04";
             String ACCESS_KEY = "4263ab2a-bbcb-4348-a149-c95e9ecbcff1";
             String URL = "https://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:443/wd/hub";
@@ -79,8 +80,8 @@ public class BaseTest {
     }
     @AfterSuite
     public void baseAfterClass(){
-        driver.close();
-        driver.quit();
+//        driver.close();
+//        driver.quit();
     }
     @Test
     public void assertLogo(){
