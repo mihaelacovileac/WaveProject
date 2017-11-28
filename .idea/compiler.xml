@@ -6,11 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="wave" />
         <module name="WaveProject" />
+        <module name="wavesystems" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="WaveProject" target="1.5" />
+      <module name="wave" target="1.8" />
+      <module name="WaveProject" target="1.8" />
+      <module name="wavesystems" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

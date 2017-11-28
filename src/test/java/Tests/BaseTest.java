@@ -4,7 +4,10 @@ import Pages.LoginPage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -15,11 +18,16 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.testng.Assert.assertTrue;
 
+import org.testng.ITestResult;
 import org.testng.annotations.*;
+
+import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
-
+@Test(groups = {"base"})
 public class BaseTest {
     protected WebDriver driver;
     protected WebDriverWait wait;
@@ -78,9 +86,20 @@ public class BaseTest {
             driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         }
     }
+//    @AfterMethod
+//
+//    public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
+//        if (testResult.getStatus() == ITestResult.FAILURE) {
+//            System.out.println(testResult.getStatus());
+//            File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//            FileUtils.copyFile(scrFile, new File("C:\\Users\\mcovi\\IdeaProjects\\WaveProject\\src\\test\\java\\ScreenShotFiles\\" + testResult.getName() + "-"
+//                    + Arrays.toString(testResult.getParameters()) + ".jpg"));
+//
+//        }
+//    }
     @AfterSuite
     public void baseAfterClass(){
-//        driver.close();
+        driver.close();
 //        driver.quit();
     }
     @Test

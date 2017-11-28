@@ -113,6 +113,7 @@ public class EntitiesPage extends BasePage {
     public void setAddEmailRU(String strEmails) {
         //addEmailFieldRU.clear();
         wait.until(ExpectedConditions.visibilityOf(addEmailFieldRU)).sendKeys(strEmails);
+//        executor.executeScript("arguments[0].sendKeys(strEmails)", addEmailFieldRU);
     }
 
     public void setAddEmailFieldAU(String strAddEmailAU) {

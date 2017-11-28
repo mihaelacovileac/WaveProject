@@ -14,6 +14,8 @@ public class SubscriptionsPage extends BasePage {
     @FindBy(xpath = "//div[@class = 'media bb pl-sm pr-sm ng-scope']/a")
     private List<WebElement> subscriptionLinks;
 
+    @FindBy(xpath = "//div[@class='ngdialog-message']/h2")
+    private WebElement dialogMessageGet;
     @FindBy(xpath = "//div[@class='ngdialog-message']")
     private WebElement dialogMessage;
 
@@ -23,6 +25,8 @@ public class SubscriptionsPage extends BasePage {
     private WebElement sliderOrizontalBar;
     @FindBy(xpath = "//button[text() = 'CHANGE Subscription']")
     private WebElement changeSubBtn;
+    @FindBy(xpath = "//button[text()='CANCEL Subscription']")
+    private WebElement cancelSubscriptionBtn;
     @FindBy(xpath = "//button[@type='button' and text()='Close']")
     private WebElement closeBtn;
 
@@ -32,6 +36,9 @@ public class SubscriptionsPage extends BasePage {
     }
     public void clickCloseBtn(){
         wait.until(ExpectedConditions.elementToBeClickable(closeBtn)).click();
+    }
+    public void clickCancelSubscriptionBtn(){
+        wait.until(ExpectedConditions.elementToBeClickable(cancelSubscriptionBtn)).click();
     }
 
     public void changeNrOfUsersDragDrop() throws InterruptedException {
@@ -51,11 +58,24 @@ public class SubscriptionsPage extends BasePage {
     public WebElement getDialogMessage() {
         return dialogMessage;
     }
+    public String getDialogMessageText(){
+        return dialogMessageGet.getText();
+    }
 
     public List<WebElement> getAllSubscriptionLinks() {
         wait.until(ExpectedConditions.visibilityOfAllElements(subscriptionLinks));
         return subscriptionLinks;
     }
+    public int countAllSubscriptionLinks(){
+        Iterator<WebElement> iterator =subscriptionLinks.iterator();
+        int count=0;
+        while (iterator.hasNext()){
+            count = count+1;
+            iterator.next();
+        }
+        return count;
+    }
+
     public void clickAllSubscriptionLinks(){
         Iterator<WebElement> iterator =subscriptionLinks.iterator();
         while (iterator.hasNext()){

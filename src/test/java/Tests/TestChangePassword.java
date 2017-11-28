@@ -12,13 +12,14 @@ public class TestChangePassword extends TestLogin {
     private HeaderPage headerPage;
     private ProfilePanelPage profilePanelPage;
     private EditProfilePage editProfilePage;
+
     @BeforeClass
     public void changePassBeforeClass(){
         headerPage = new HeaderPage(driver);
         profilePanelPage = new ProfilePanelPage(driver);
         editProfilePage = new EditProfilePage(driver);
     }
-    @Test(dependsOnMethods = "testLogin",dataProviderClass = DataProviders.class,dataProvider= "ChangePasswordPositive", enabled = true)
+    @Test(dependsOnMethods = "testLogin",dataProviderClass = DataProviders.class,dataProvider= "ChangePasswordPositive", enabled = false, groups = {"editProfile"})
     public void testChangePasswordPositive(String currentPass, String newPass, String confirmPass){
         headerPage.clickUserLink();
         profilePanelPage.clickEditProfileBtn();

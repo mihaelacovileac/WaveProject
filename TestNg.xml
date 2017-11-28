@@ -4,8 +4,14 @@
     <parameter name="url" value="http://fits.qauber.com/#/page/login"/>
     <parameter name="browser" value="chrome"/>
     <test name = "test">
+        <!--<groups>-->
+            <!--<run>-->
+                <!--<include name="base"/>-->
+                <!--<include name = "editProfile" />-->
+            <!--</run>-->
+        <!--</groups>-->
         <classes>
-            <class name="Tests.TestSubscriptions"/>
+            <class name="Tests.TestAddReport"/>
         </classes>
     </test>
 </suite>

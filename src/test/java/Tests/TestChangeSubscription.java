@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import java.util.Iterator;
 import java.util.List;
 
-public class TestSubscriptions extends TestLogin {
+public class TestChangeSubscription extends TestLogin {
     private HeaderPage headerPage;
     private ProfilePanelPage profilePanelPage;
     private SubscriptionsPage subscriptionsPage;

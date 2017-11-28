@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Sign_outTest extends TestLogin {
+public class TestSignOut extends TestLogin {
     private ProfilePanelPage profilePanelPage;
     private LoginPage loginPage;
     private HeaderPage headerPage;

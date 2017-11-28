@@ -9,11 +9,11 @@ import org.testng.annotations.Test;
 
 public class TestLogin extends BaseTest {
     private LoginPage loginPage;
-    @BeforeClass
+    @BeforeClass(groups = {"editProfile"})
     public void loginBeforeClass(){
         loginPage = new LoginPage(driver);
     }
-    @Test(dataProviderClass = DataProviders.class,dataProvider= "usernamePassword")
+    @Test(dataProviderClass = DataProviders.class,dataProvider= "usernamePassword", groups = {"editProfile"}, dependsOnMethods = "assertLogo")
     public void testLogin(String username, String password) throws InterruptedException {
         loginPage.setUsername(username);
         loginPage.setPassword(password);
